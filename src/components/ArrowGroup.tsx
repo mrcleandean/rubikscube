@@ -27,10 +27,8 @@ const ArrowGroup: FC<ArrowGroupProps> = ({ scene, mats, position, rotation, cw, 
                     e.stopPropagation();
                     cw();
                 }}
-                onPointerEnter={() => scaleCW.start(ARROW_HOVER_SCALE)}
-                onPointerLeave={() => scaleCW.start(1)}
-                onPointerUp={() => scaleCW.start(ARROW_HOVER_SCALE)}
-                onPointerDown={() => scaleCW.start(1)}
+                onPointerOver={() => scaleCW.start(ARROW_HOVER_SCALE)}
+                onPointerOut={() => scaleCW.start(1)}
                 scale={scaleCW}
             >
                 <primitive
@@ -45,10 +43,8 @@ const ArrowGroup: FC<ArrowGroupProps> = ({ scene, mats, position, rotation, cw, 
                     e.stopPropagation();
                     ccw();
                 }}
-                onPointerEnter={() => scaleCCW.start(ARROW_HOVER_SCALE)}
-                onPointerLeave={() => scaleCCW.start(1)}
-                onPointerUp={() => scaleCCW.start(ARROW_HOVER_SCALE)}
-                onPointerDown={() => scaleCCW.start(1)}
+                onPointerOver={() => scaleCCW.start(ARROW_HOVER_SCALE)}
+                onPointerOut={() => scaleCCW.start(1)}
                 scale={scaleCCW}
             >
                 <primitive
