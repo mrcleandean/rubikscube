@@ -3,7 +3,6 @@ import { useFrame } from "@react-three/fiber";
 import { BackSide, type Mesh } from "three";
 import { useRef } from "react";
 
-
 const Background = () => {
     const ref = useRef<Mesh>(null);
 

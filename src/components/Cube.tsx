@@ -6,6 +6,7 @@ const Cube = () => {
     const roundedBoxGeometry = useMemo(() => {
         return new RoundedBoxGeometry(1, 1, 1, 3, 0.1)
     }, []);
+
     return (
         <>
             {[...Array(3).keys()].map(x =>
@@ -14,7 +15,7 @@ const Cube = () => {
                         <Unit
                             position={[x - 1, y - 1, z - 1]}
                             geometry={roundedBoxGeometry}
-                            key={`cube-${x}-${y}-${z}`}
+                            key={`unit-${x}-${y}-${z}`}
                         />
                     ))
                 )

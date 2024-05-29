@@ -12,6 +12,7 @@ const Action = () => {
     const { rotations, randomSpring } = useCubeContext();
     const [showAxes, setShowAxes] = useState(true);
     const [showArrows, setShowArrows] = useState(true);
+
     const { scale: axisSpring } = useSpring({ scale: showAxes ? 1 : 0, config: config.stiff });
     const { scale: arrowSpring } = useSpring({ scale: showArrows ? 1 : 0, config: config.stiff });
 

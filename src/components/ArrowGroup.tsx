@@ -4,7 +4,6 @@ import { a, useSpring } from '@react-spring/three';
 import type { FC } from 'react';
 import type { Group, Object3DEventMap, Material } from 'three';
 
-
 export type ArrowGroupProps = {
     scene: Group<Object3DEventMap>,
     mats: [Material, Material],
@@ -17,6 +16,7 @@ export type ArrowGroupProps = {
 const ArrowGroup: FC<ArrowGroupProps> = ({ scene, mats, position, rotation, cw, ccw }) => {
     const { scale: scaleCW } = useSpring({ scale: 1, config: ARROW_SPRING_CONFIG });
     const { scale: scaleCCW } = useSpring({ scale: 1, config: ARROW_SPRING_CONFIG })
+
     return (
         <group
             position={position}

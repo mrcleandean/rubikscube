@@ -8,8 +8,10 @@ import { useMemo } from "react";
 const Controls = () => {
     const { rotations } = useCubeContext();
     const { scene } = useGLTF('/arrow.glb');
+
     const white = useMemo(() => new MeshBasicMaterial({ color: 'white' }), []);
     const black = useMemo(() => new MeshBasicMaterial({ color: 'black' }), []);
+
     return (
         <>
             <ArrowGroup

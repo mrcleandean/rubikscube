@@ -9,16 +9,17 @@ import Cube from "./Cube";
 
 const Experience = () => {
     const { mainRef, rotationRef, rotationSpring } = useCubeContext();
+
     return (
         <Canvas className="z-0">
+            <Background />
             <a.group ref={mainRef}>
                 <Cube />
             </a.group>
             <a.group ref={rotationRef} rotation={rotationSpring as unknown as [number, number, number]} />
-            <Camera />
             <Lights />
+            <Camera />
             <Action />
-            <Background />
         </Canvas>
     )
 }
