@@ -37,6 +37,7 @@ const Provider = ({ children }: { children: ReactNode }) => {
 
     const rotate = useCallback((axis: 'x' | 'y' | 'z', dir: 1 | -1, filter: '+' | '-' | '0', chain: null | number = null) => {
         if (!rotationRef.current || !mainRef.current || rotationSpring.isAnimating) return;
+        AUDIO.load();
         AUDIO.currentTime = 0.15;
         AUDIO.play();
         populateMainRef();
